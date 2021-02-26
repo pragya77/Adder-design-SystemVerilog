@@ -1,3 +1,4 @@
+
 `timescale 1ns/100ps 
  module adder( intf inf);
 
@@ -10,7 +11,7 @@
 		end
 		else 
 		begin
-		{ inf.sum, inf.carry } = inf.in1 + inf.in2;
+          { inf.carry, inf.sum } = inf.in1 + inf.in2;
 		end
 	end
 
