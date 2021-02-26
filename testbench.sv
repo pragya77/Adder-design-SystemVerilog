@@ -54,7 +54,7 @@
 			ref_item.copy(item);
 
 			if(!ref_item.reset)
-			{ref_item.sum, ref_item.carry} = ref_item.in1 + ref_item.in2;
+            {ref_item.carry, ref_item.sum} = ref_item.in1 + ref_item.in2;
 			else
 			{ref_item.sum, ref_item.carry} = 0;
 
@@ -191,8 +191,9 @@ class test;
 		#440 $finish;
 	end
 	initial begin
+	
 	$dumpfile("dump.vcd");
-	$dumpvars;
+      $dumpvars;
 	end
 	
  endmodule
