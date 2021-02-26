@@ -1,5 +1,6 @@
- 
- `timescale 1ns/100ps 
+// Code your testbench here
+// or browse Examples
+`timescale 1ns/100ps 
 
  interface intf();	
 	logic reset;
@@ -82,7 +83,7 @@
 		m_item.reset = inf.reset;
 		m_item.sum = inf.sum;
 		m_item.carry = inf.carry;
-		mon_m.put(item);
+      mon_m.put(m_item);
 	end
 	endtask
 
@@ -190,8 +191,8 @@ class test;
 		#440 $finish;
 	end
 	initial begin
-	$dumpvars;
 	$dumpfile("dump.vcd");
+	$dumpvars;
 	end
 	
  endmodule
